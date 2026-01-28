@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${sourceCode.variable} dark`}>
+    <html lang="en" className={`${playfair.variable} ${sourceCode.variable} light`}>
       <body className="font-serif antialiased">{children}</body>
     </html>
   );

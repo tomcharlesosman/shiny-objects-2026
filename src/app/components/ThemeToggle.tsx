@@ -12,7 +12,7 @@ export default function ThemeToggle() {
     if (saved) {
       setIsDark(saved === "dark");
     } else {
-      setIsDark(true); // Default dark
+      setIsDark(false); // Default light
     }
   }, []);
 
