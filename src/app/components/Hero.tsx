@@ -15,14 +15,6 @@ export default function Hero() {
       {/* Spectral glow behind headline */}
       <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[550px] h-[220px] bg-amber/11 rounded-full blur-[80px] pointer-events-none" />
       
-      {/* Outer frame */}
-      <div className="absolute inset-6 border border-wood/20 rounded-[24px] pointer-events-none" />
-      <div className="absolute inset-10 border border-copper/10 rounded-[20px] pointer-events-none" />
-      
-      {/* Vertical line illumination - architectural LED strips */}
-      <div className="absolute left-[15%] top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-amber/30 to-transparent pointer-events-none" />
-      <div className="absolute right-[15%] top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-amber/30 to-transparent pointer-events-none" />
-      
       <div className="relative z-10 max-w-3xl mx-auto w-full flex flex-col items-center text-center">
         
         {/* EST Badge */}

@@ -46,14 +46,16 @@ export default function Navigation() {
           </div>
 
           {/* Right side - Right */}
-          <div className="flex justify-end items-center gap-3">
+          <div className="flex justify-end items-center gap-2">
             <Link
               href="/join"
-              className="hidden sm:inline-flex px-4 py-2 bg-amber text-background font-mono text-xs tracking-wider rounded-full hover:bg-amber-bright transition-all"
+              className="hidden sm:inline-flex px-4 py-2 h-9 items-center bg-amber text-background font-mono text-xs tracking-wider rounded-full hover:bg-amber-bright transition-all"
             >
               Join
             </Link>
-            <ThemeToggle />
+            <div className="h-9">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>
