@@ -27,14 +27,14 @@ const features = [
 
 export default function Inside() {
   return (
-    <section id="inside" className="py-32 px-6 border-t border-border relative">
+    <section id="inside" className="py-32 px-6 border-t border-border/50 relative">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-4 mb-16">
           <span className="text-copper font-mono text-xs tracking-wider">CAPABILITIES</span>
           <div className="flex-1 h-px bg-border" />
         </div>
         
-        <h2 className="text-4xl md:text-5xl font-serif text-marble mb-4">
+        <h2 className="text-4xl md:text-5xl font-serif text-cream mb-4">
           What You Receive
         </h2>
         <p className="text-foreground-muted max-w-xl mb-12">
@@ -45,9 +45,9 @@ export default function Inside() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="glass p-6 rounded-sm border-t border-stone hover:border-copper/30 transition-all"
+              className="glass p-6 rounded-2xl border border-wood hover:border-copper/30 transition-all underlight"
             >
-              <h3 className="text-lg font-serif text-marble mb-2">{feature.title}</h3>
+              <h3 className="text-lg font-serif text-cream mb-2">{feature.title}</h3>
               <p className="text-foreground-muted text-sm leading-relaxed">
                 {feature.description}
               </p>

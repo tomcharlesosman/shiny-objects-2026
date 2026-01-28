@@ -28,17 +28,17 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="py-32 px-6 border-t border-border relative">
+    <section className="py-32 px-6 border-t border-border/50 relative">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <span className="text-copper font-mono text-xs tracking-wider">FAQ</span>
           <div className="flex-1 h-px bg-border" />
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className="glass p-6 rounded-sm border-t border-stone hover:border-copper/30 transition-colors">
-              <h3 className="font-serif text-marble mb-2">{faq.question}</h3>
+            <div key={i} className="glass p-6 rounded-2xl border border-wood hover:border-copper/30 transition-colors underlight">
+              <h3 className="font-serif text-cream mb-2">{faq.question}</h3>
               <p className="text-foreground-muted text-sm leading-relaxed">{faq.answer}</p>
             </div>
           ))}

@@ -1,32 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  /* Greco-Futurism: Warm marble, rose gold, nested arches */
-  --background: #0c0a09;
-  --background-alt: #1c1917;
-  --foreground: #faf6f1;
-  --foreground-muted: #a89f94;
+  /* Greco-Futurism: Elevator luxury - wood, cream, champagne, soft curves */
+  --background: #0d0c0b;
+  --background-alt: #1a1816;
+  --foreground: #faf8f5;
+  --foreground-muted: #a8a39c;
   
-  /* Warm marble tones */  
-  --marble: #f5ebe0;
-  --marble-warm: #e8ddd1;
-  --marble-cool: #d4c4b5;
+  /* Warm wood tones */
+  --wood: #5c4a3a;
+  --wood-light: #8b7355;
+  --wood-dark: #3d3026;
   
-  /* Rose gold / copper */
+  /* Cream/champagne */
+  --cream: #f5f0e8;
+  --champagne: #e8dfd3;
+  --taupe: #c4b8a8;
+  
+  /* Bronze/copper */
+  --bronze: #b87333;
   --copper: #c9a77c;
-  --copper-bright: #d4af37;
   --copper-dim: #8b7355;
-  --rose-gold: #b76e79;
+  --rose-gold: #c4a494;
   
-  /* Dark stone */
-  --stone-dark: #292524;
-  --stone: #44403c;
+  /* Glass/mirror */
+  --glass: rgba(250, 248, 245, 0.03);
   
-  /* Glass */
-  --glass: rgba(250, 246, 241, 0.03);
-  
-  --border: #292524;
-  --card: #1c1917;
+  --border: #2a2622;
+  --card: #1c1915;
 }
 
 @theme inline {
@@ -34,11 +35,15 @@
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
-  --color-marble: var(--marble);
-  --color-marble-warm: var(--marble-warm);
+  --color-wood: var(--wood);
+  --color-wood-light: var(--wood-light);
+  --color-cream: var(--cream);
+  --color-champagne: var(--champagne);
+  --color-taupe: var(--taupe);
+  --color-bronze: var(--bronze);
   --color-copper: var(--copper);
-  --color-copper-bright: var(--copper-bright);
-  --color-stone: var(--stone);
+  --color-copper-dim: var(--copper-dim);
+  --color-rose-gold: var(--rose-gold);
   --color-glass: var(--glass);
   --color-border: var(--border);
   --color-card: var(--card);
@@ -60,65 +65,62 @@ body {
   font-family: var(--font-mono);
 }
 
-/* Copper glow text */
+/* Bronze glow text */
 .shiny-text {
   color: var(--copper);
   text-shadow: 
-    0 0 30px rgba(201, 167, 124, 0.4),
-    0 0 60px rgba(201, 167, 124, 0.2);
+    0 0 30px rgba(201, 167, 124, 0.35),
+    0 0 60px rgba(201, 167, 124, 0.15);
 }
 
-/* Copper button glow */
-.glow-copper {
+/* Soft glow for buttons */
+.glow-soft {
   box-shadow: 
-    0 0 30px rgba(201, 167, 124, 0.25),
-    inset 0 0 20px rgba(201, 167, 124, 0.05);
+    0 4px 30px rgba(201, 167, 124, 0.15),
+    0 0 60px rgba(201, 167, 124, 0.1);
 }
 
-/* Classical column styling */
-.column {
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(245, 235, 224, 0.02) 20%, 
-    rgba(245, 235, 224, 0.05) 50%, 
-    rgba(245, 235, 224, 0.02) 80%, 
-    transparent 100%
-  );
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
+/* Under-lighting effect */
+.underlight {
+  box-shadow: 0 10px 40px -10px rgba(201, 167, 124, 0.2);
 }
 
-/* Copper line accent */
-.copper-line {
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    var(--copper-dim) 20%, 
-    var(--copper) 50%, 
-    var(--copper-dim) 80%, 
-    transparent 100%
-  );
-}
-
-/* Glass morphism */
-.glass {
-  background: var(--glass);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(250, 246, 241, 0.05);
-}
-
-/* Arch/nested frame */
-.arch-frame {
+/* Curved/arch frame (rounded like elevator) */
+.arch-rounded {
+  border-radius: 24px;
   border: 1px solid var(--copper-dim);
   position: relative;
 }
 
-.arch-frame::before {
+.arch-rounded::before {
   content: '';
   position: absolute;
-  inset: 4px;
-  border: 1px solid rgba(201, 167, 124, 0.3);
+  inset: 6px;
+  border: 1px solid rgba(201, 167, 124, 0.2);
+  border-radius: 18px;
   pointer-events: none;
+}
+
+/* Copper accent line */
+.copper-line {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--copper-dim) 15%, 
+    var(--copper) 50%, 
+    var(--copper-dim) 85%, 
+    transparent 100%
+  );
+}
+
+/* Glass morphism - champagne tint */
+.glass {
+  background: linear-gradient(135deg, 
+    rgba(245, 240, 232, 0.03) 0%, 
+    rgba(232, 223, 211, 0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 167, 124, 0.1);
 }
 
 /* Marquee */
@@ -137,8 +139,8 @@ body {
   color: var(--background);
 }
 
-/* Subtle texture */
-.texture {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  opacity: 0.02;
+/* Soft grain texture */
+.texture-soft {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.015;
 }

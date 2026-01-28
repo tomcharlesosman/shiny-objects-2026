@@ -1,6 +1,6 @@
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-32 px-6 border-t border-border relative">
+    <section id="pricing" className="py-32 px-6 border-t border-border/50 relative">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <span className="text-copper font-mono text-xs tracking-wider">MEMBERSHIP</span>
@@ -8,7 +8,7 @@ export default function Pricing() {
         </div>
 
         <div className="text-center mb-12">
-          <h2 className="text-5xl md:text-7xl font-serif text-marble mb-4">
+          <h2 className="text-5xl md:text-7xl font-serif text-cream mb-4">
             $99/year
           </h2>
           <p className="text-foreground-muted font-mono text-xs tracking-wider">
@@ -16,7 +16,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="glass p-8 rounded-sm border border-copper/20 mb-8">
+        <div className="glass p-8 rounded-2xl border border-copper/20 mb-8 underlight">
           <h3 className="text-copper font-mono text-xs mb-6 tracking-wider">ACCESS INCLUDES</h3>
           <ul className="space-y-4">
             {[
@@ -39,7 +39,7 @@ export default function Pricing() {
           href="https://discord.gg/your-invite-link"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full text-center py-5 bg-copper/10 border border-copper text-copper font-mono text-sm tracking-wider rounded-sm hover:bg-copper/20 transition-all glow-copper"
+          className="block w-full text-center py-5 bg-copper/10 border border-copper text-copper font-mono text-sm tracking-wider rounded-xl hover:bg-copper/20 transition-all glow-soft"
         >
           Join the Club
         </a>

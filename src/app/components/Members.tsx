@@ -25,18 +25,18 @@ const testimonials = [
 
 export default function Members() {
   return (
-    <section className="py-32 px-6 border-t border-border relative">
+    <section className="py-32 px-6 border-t border-border/50 relative">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-4 mb-16">
           <span className="text-copper font-mono text-xs tracking-wider">MEMBERS</span>
           <div className="flex-1 h-px bg-border" />
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/50 mb-20">
+        {/* Stats - rounded like elevator buttons */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-20">
           {memberTypes.map((type) => (
-            <div key={type.role} className="column p-6 text-center bg-background">
-              <span className="block text-3xl font-serif text-marble mb-1">{type.count}</span>
+            <div key={type.role} className="glass p-6 rounded-2xl text-center underlight">
+              <span className="block text-3xl font-serif text-cream mb-1">{type.count}</span>
               <span className="text-foreground-muted/60 text-xs uppercase tracking-widest font-mono">{type.role}</span>
             </div>
           ))}
@@ -45,12 +45,12 @@ export default function Members() {
         {/* Testimonials */}
         <div className="grid md:grid-cols-3 gap-4">
           {testimonials.map((t) => (
-            <div key={t.author} className="glass p-6 rounded-sm border-t border-copper/30">
+            <div key={t.author} className="glass p-6 rounded-2xl border border-copper/20 underlight">
               <p className="text-foreground-muted mb-6 leading-relaxed text-sm">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div>
-                <p className="font-serif text-marble">{t.author}</p>
+                <p className="font-serif text-cream">{t.author}</p>
                 <p className="text-foreground-muted/50 text-xs font-mono">{t.role}</p>
               </div>
             </div>
