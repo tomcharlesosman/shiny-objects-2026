@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Hero() {
   return (
@@ -7,21 +8,26 @@ export default function Hero() {
       <div className="absolute inset-0 texture-soft pointer-events-none" />
       
       {/* Ambient glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-amber/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-coral/5 rounded-full blur-3xl" />
       
       {/* Outer frame */}
       <div className="absolute inset-6 border border-wood/20 rounded-[24px] pointer-events-none" />
       <div className="absolute inset-10 border border-copper/10 rounded-[20px] pointer-events-none" />
       
+      {/* Theme Toggle */}
+      <div className="absolute top-8 right-8 z-20">
+        <ThemeToggle />
+      </div>
+      
       <div className="relative z-10 max-w-3xl mx-auto w-full flex flex-col items-center text-center">
         
         {/* EST Badge */}
         <div className="flex items-center gap-4 mb-8">
-          <div className="h-px w-12 bg-copper-dim/40" />
-          <span className="text-copper font-mono text-xs tracking-[0.4em] uppercase">
+          <div className="h-px w-12 bg-coral-dim/40" />
+          <span className="text-coral font-mono text-xs tracking-[0.4em] uppercase">
             Est. MMXXI
           </span>
-          <div className="h-px w-12 bg-copper-dim/40" />
+          <div className="h-px w-12 bg-coral-dim/40" />
         </div>
 
         {/* Logo */}
@@ -38,7 +44,7 @@ export default function Hero() {
         </div>
 
         {/* Tagline */}
-        <p className="text-amber/70 font-mono text-xs tracking-[0.3em] uppercase mb-6">
+        <p className="text-coral/70 font-mono text-xs tracking-[0.3em] uppercase mb-6">
           The AI Discovery Society
         </p>
 
@@ -49,7 +55,7 @@ export default function Hero() {
         </h1>
 
         {/* Description */}
-        <div className="glass max-w-md px-8 py-6 rounded-xl border border-copper/10 mb-10">
+        <div className="glass max-w-md px-8 py-6 rounded-xl border border-coral/10 mb-10">
           <p className="text-foreground-muted leading-relaxed text-sm">
             500+ builders, researchers, and visionaries. 
             A society for those who see what others cannot.
@@ -74,14 +80,14 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-3">
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-amber/10 border border-amber/50 text-amber font-mono text-sm tracking-wider rounded-lg hover:bg-amber/20 transition-all"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-coral/10 border border-coral/50 text-coral font-mono text-sm tracking-wider rounded-lg hover:bg-coral/20 transition-all"
           >
             Enter the Club — $99/year
             <span>→</span>
           </a>
           <a
             href="#inside"
-            className="inline-flex items-center justify-center px-6 py-3.5 border border-wood text-foreground-muted font-mono text-sm tracking-wider rounded-lg hover:border-copper/50 hover:text-foreground transition-colors"
+            className="inline-flex items-center justify-center px-6 py-3.5 border border-warm-gray text-foreground-muted font-mono text-sm tracking-wider rounded-lg hover:border-coral/50 hover:text-foreground transition-colors"
           >
             Discover what&apos;s inside
           </a>

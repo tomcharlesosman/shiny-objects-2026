@@ -33,7 +33,7 @@ export default function Pricing() {
           <div className="absolute -inset-4 border border-wood/20 rounded-t-[40px] rounded-b-lg" />
           <div className="absolute -inset-2 border border-amber/10 rounded-t-[32px] rounded-b-md" />
           
-          <div className="glass p-8 rounded-t-[24px] rounded-b-sm border-t border-amber/20 relative">
+          <div className="glass p-8 rounded-t-[24px] rounded-b-sm border-t border-coral/20 relative">
             <h3 className="text-amber/70 font-mono text-xs mb-8 tracking-wider text-center">ACCESS INCLUDES</h3>
             <ul className="space-y-4 max-w-md mx-auto">
               {[
@@ -59,7 +59,7 @@ export default function Pricing() {
             href="https://discord.gg/your-invite-link"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-center py-6 bg-amber/10 border border-amber text-amber font-mono text-sm tracking-[0.2em] rounded-t-lg rounded-b-sm hover:bg-amber/20 transition-all relative overflow-hidden group"
+            className="block w-full text-center py-6 bg-coral/10 border border-coral text-coral font-mono text-sm tracking-[0.2em] rounded-t-lg rounded-b-sm hover:bg-amber/20 transition-all relative overflow-hidden group"
           >
             {/* Animated glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
@@ -69,7 +69,7 @@ export default function Pricing() {
 
         {/* Urgency - like a door sign */}
         <div className="mt-8 flex items-center justify-center gap-3">
-          <div className="w-2 h-2 bg-amber rounded-full animate-pulse" />
+          <div className="w-2 h-2 bg-coral rounded-full animate-pulse" />
           <span className="text-foreground-muted/70 font-mono text-xs tracking-wider">
             47 INVITATIONS REMAINING
           </span>

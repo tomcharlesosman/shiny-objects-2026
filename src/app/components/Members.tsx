@@ -36,7 +36,7 @@ export default function Members() {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-4 mb-16">
           <div className="h-px w-12 bg-amber/30" />
-          <span className="text-amber/70 font-mono text-xs tracking-[0.3em] uppercase">Members</span>
+          <span className="text-coral/70 font-mono text-xs tracking-[0.3em] uppercase">Members</span>
           <div className="h-px w-12 bg-amber/30" />
         </div>
 

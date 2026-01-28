@@ -13,7 +13,7 @@ export default function Manifesto() {
         <div className="mb-24">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-16 bg-amber/30" />
-            <span className="text-amber/70 font-mono text-xs tracking-[0.3em] uppercase">The Challenge</span>
+            <span className="text-coral/70 font-mono text-xs tracking-[0.3em] uppercase">The Challenge</span>
             <div className="h-px w-16 bg-amber/30" />
           </div>
           
@@ -50,7 +50,7 @@ export default function Manifesto() {
           </h2>
           
           {/* Glass panel with amber border */}
-          <div className="glass p-8 rounded-lg border border-amber/30 relative overflow-hidden">
+          <div className="glass p-8 rounded-lg border border-coral/30 relative overflow-hidden">
             {/* Side light effect */}
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-amber/40 to-transparent" />
             <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-amber/40 to-transparent" />

@@ -35,7 +35,7 @@ export default function Inside() {
       <div className="max-w-6xl mx-auto relative">
         <div className="flex items-center justify-center gap-4 mb-16">
           <div className="h-px w-12 bg-amber/30" />
-          <span className="text-amber/70 font-mono text-xs tracking-[0.3em] uppercase">Capabilities</span>
+          <span className="text-coral/70 font-mono text-xs tracking-[0.3em] uppercase">Capabilities</span>
           <div className="h-px w-12 bg-amber/30" />
         </div>
         
@@ -55,7 +55,7 @@ export default function Inside() {
               {/* Arch frame on hover */}
               <div className="absolute -inset-2 border border-amber/0 group-hover:border-amber/20 rounded-t-[24px] rounded-b-md transition-all duration-300" />
               
-              <div className="glass p-6 rounded-t-[20px] rounded-b-sm border-t border-wood group-hover:border-amber/30 transition-all relative overflow-hidden">
+              <div className="glass p-6 rounded-t-[20px] rounded-b-sm border-t border-wood group-hover:border-coral/30 transition-all relative overflow-hidden">
                 {/* Subtle amber glow on hover */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-amber/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 

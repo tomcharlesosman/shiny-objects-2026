@@ -36,7 +36,7 @@ export default function FAQ() {
       <div className="max-w-2xl mx-auto relative">
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="h-px w-12 bg-amber/30" />
-          <span className="text-amber/70 font-mono text-xs tracking-[0.3em] uppercase">Questions</span>
+          <span className="text-coral/70 font-mono text-xs tracking-[0.3em] uppercase">Questions</span>
           <div className="h-px w-12 bg-amber/30" />
         </div>
 
@@ -64,7 +64,7 @@ export default function FAQ() {
             <p className="text-foreground-muted/40 text-xs font-mono mb-3 tracking-wider">ADDITIONAL INQUIRIES</p>
             <a
               href="mailto:hello@shinyobject.club"
-              className="text-amber hover:text-amber-bright transition-colors font-mono text-sm tracking-wider border-b border-amber/30 pb-1 hover:border-amber"
+              className="text-coral hover:text-coral-soft transition-colors font-mono text-sm tracking-wider border-b border-coral/30 pb-1 hover:border-amber"
             >
               hello@shinyobject.club
             </a>
