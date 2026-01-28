@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm cream with mint accent — no blues, no purples, no gradients */
-  --background: #faf9f6;
-  --foreground: #1c1917;
-  --accent: #14b8a6;
-  --accent-warm: #f59e0b;
-  --muted: #78716c;
-  --border: #e7e5e4;
-  --card: #ffffff;
-  --hover: #f5f5f4;
+  /* Daring warm palette — coral, ochre, warm gray. No blues, no purples, no gradients */
+  --background: #0c0a09;
+  --background-alt: #1c1917;
+  --foreground: #fafaf9;
+  --foreground-muted: #a8a29e;
+  --accent: #f97316;
+  --accent-secondary: #eab308;
+  --accent-warm: #ef4444;
+  --border: #292524;
+  --card: #1c1917;
+  --hover: #262322;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
   --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
   --color-accent-warm: var(--accent-warm);
-  --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card: var(--card);
   --color-hover: var(--hover);
@@ -28,6 +32,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 /* Typography */
@@ -35,21 +40,30 @@ body {
   font-family: var(--font-mono);
 }
 
-/* Shiny text - solid color with subtle animation */
-.shiny-text {
-  color: var(--accent);
-  position: relative;
+/* Glimmer effect for "shiny" */
+@keyframes glimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
 }
 
-.shiny-text::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--accent-warm);
-  opacity: 0.6;
+.shiny-text {
+  color: var(--accent);
+  animation: glimmer 3s ease-in-out infinite;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 40px -10px var(--accent);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee {
+  animation: marquee 30s linear infinite;
 }
 
 /* Smooth scroll */
@@ -57,8 +71,23 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
+/* Selection */
 ::selection {
   background: var(--accent);
-  color: white;
+  color: var(--background);
+}
+
+/* Noise texture overlay */
+.noise {
+  position: relative;
+}
+
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
 }

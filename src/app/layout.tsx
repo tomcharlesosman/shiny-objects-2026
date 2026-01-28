@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Sans, Space_Mono } from "next/font/google";
+import { Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-dm",
 });
@@ -14,8 +14,13 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shiny Object Social Club — See the Next Big Thing in AI",
-  description: "A paid community for discovering what's possible with AI and digital technology. Join the conversation.",
+  title: "Shiny Object Social Club — The AI Discovery Community",
+  description: "A paid community since 2021. 500+ curious minds discovering the next big thing in AI before everyone else.",
+  openGraph: {
+    title: "Shiny Object Social Club",
+    description: "See the next big thing in AI before everyone else.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -24,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${spaceMono.variable}`}>
-      <body className="font-sans">{children}</body>
+    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

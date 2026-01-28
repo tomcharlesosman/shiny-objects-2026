@@ -1,101 +1,104 @@
-const plans = [
-  {
-    name: "Monthly",
-    price: "$29",
-    period: "/month",
-    description: "Full access. Cancel anytime.",
-    features: [
-      "Unlimited Discord access",
-      "All weekly live calls",
-      "Resource library",
-      "Member-only channels",
-      "Direct expert access",
-    ],
-    cta: "Join Monthly",
-    popular: false,
-  },
-  {
-    name: "Annual",
-    price: "$290",
-    period: "/year",
-    description: "2 months free. Best value.",
-    features: [
-      "Everything in Monthly",
-      "Exclusive annual member events",
-      "Early access to new features",
-      "Priority support",
-      "Member recognition",
-    ],
-    cta: "Join Annual",
-    popular: true,
-  },
-];
-
 export default function Pricing() {
   return (
-    <section className="py-24 px-6 border-t border-border bg-hover/30">
+    <section id="pricing" className="py-32 px-6 border-t border-border">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-mono text-3xl md:text-4xl font-bold mb-4">
-            Join the Club
+          <p className="text-accent-warm font-mono text-sm mb-4">JOIN THE CLUB</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Choose Your Path
           </h2>
-          <p className="text-muted max-w-xl mx-auto">
+          <p className="text-foreground-muted">
             Invest in your knowledge. Cancel anytime.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`relative p-8 rounded-2xl border ${
-                plan.popular
-                  ? "border-accent bg-accent/5"
-                  : "border-border bg-card"
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1 bg-accent text-white text-sm font-mono rounded-full">
-                    Best Value
-                  </span>
-                </div>
-              )}
-              
-              <div className="mb-6">
-                <h3 className="font-mono text-lg font-semibold mb-2">
-                  {plan.name}
-                </h3>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted">{plan.period}</span>
-                </div>
-                <p className="text-muted text-sm mt-2">{plan.description}</p>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Monthly */}
+          <div className="p-8 border border-border rounded-2xl bg-card">
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Monthly</h3>
+              <div className="flex items-baseline gap-1">
+                <span className="text-5xl font-bold">$29</span>
+                <span className="text-foreground-muted">/month</span>
               </div>
-              
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm">
-                    <span className="text-accent mt-0.5">✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <a
-                href="https://discord.gg/your-invite-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
-                  plan.popular
-                    ? "bg-accent text-white hover:bg-accent/90"
-                    : "border border-border hover:bg-hover"
-                }`}
-              >
-                {plan.cta}
-              </a>
+              <p className="text-foreground-muted text-sm mt-2">
+                Full access. Cancel anytime.
+              </p>
             </div>
-          ))}
+
+            <ul className="space-y-3 mb-8">
+              {[
+                "Unlimited Discord access",
+                "All weekly live calls",
+                "Resource library",
+                "Member-only channels",
+              ].map((f) => (
+                <li key={f} className="flex items-center gap-3 text-sm">
+                  <span className="text-accent">✓</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://discord.gg/your-invite-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center py-4 border border-border rounded-lg font-semibold hover:bg-hover transition-colors"
+            >
+              Join Monthly
+            </a>
+          </div>
+
+          {/* Annual */}
+          <div className="relative p-8 border border-accent rounded-2xl bg-card overflow-hidden">
+            <div className="absolute top-0 right-0 px-4 py-1 bg-accent text-background text-xs font-mono">
+              BEST VALUE
+            </div>
+
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Annual</h3>
+              <div className="flex items-baseline gap-1">
+                <span className="text-5xl font-bold text-accent">$290</span>
+                <span className="text-foreground-muted">/year</span>
+              </div>
+              <p className="text-foreground-muted text-sm mt-2">
+                2 months free. Lock in 2026 pricing.
+              </p>
+            </div>
+
+            <ul className="space-y-3 mb-8">
+              {[
+                "Everything in Monthly",
+                "Exclusive annual member events",
+                "Priority support",
+                "Founder pricing locked",
+              ].map((f) => (
+                <li key={f} className="flex items-center gap-3 text-sm">
+                  <span className="text-accent">✓</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://discord.gg/your-invite-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center py-4 bg-accent text-background rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+            >
+              Join Annual
+            </a>
+          </div>
+        </div>
+
+        {/* Urgency */}
+        <div className="mt-12 text-center">
+          <p className="text-foreground-muted text-sm">
+            <span className="text-accent-warm font-semibold">47 spots left</span> at relaunch pricing.
+            <br />
+            Price increases to $49/month when spots fill.
+          </p>
         </div>
       </div>
     </section>
