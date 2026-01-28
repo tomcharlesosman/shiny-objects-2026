@@ -1,6 +1,6 @@
 const tickerItems = [
   "Claude 4 leaked specs",
-  "OpenAI o3 release",
+  "OpenAI o3 release", 
   "Perplexity raised $500M",
   "DeepSeek V3 benchmark",
   "MCP protocol adoption",
@@ -13,20 +13,20 @@ const tickerItems = [
 
 export default function Ticker() {
   return (
-    <div className="border-y border-border bg-background-alt overflow-hidden py-4">
+    <div className="border-y border-border bg-background-alt/50 overflow-hidden py-3">
       <div className="flex whitespace-nowrap">
-        <div className="marquee flex items-center gap-8 text-sm font-mono text-foreground-muted">
+        <div className="marquee flex items-center gap-8 text-xs font-mono text-foreground-muted tracking-wide">
           {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="flex items-center gap-4">
-              <span className="text-accent-secondary">✦</span>
+            <span key={i} className="flex items-center gap-3">
+              <span className="text-accent-secondary">◆</span>
               <span>{item}</span>
             </span>
           ))}
         </div>
-        <div className="marquee flex items-center gap-8 text-sm font-mono text-foreground-muted">
+        <div className="marquee flex items-center gap-8 text-xs font-mono text-foreground-muted tracking-wide">
           {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="flex items-center gap-4">
-              <span className="text-accent-secondary">✦</span>
+            <span key={i} className="flex items-center gap-3">
+              <span className="text-accent-secondary">◆</span>
               <span>{item}</span>
             </span>
           ))}
