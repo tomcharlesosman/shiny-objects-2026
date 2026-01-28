@@ -2,9 +2,17 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center px-6 py-24">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-mono text-sm mb-8">
+        {/* Urgency pricing bar */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-mono text-sm mb-6">
           <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-          Now accepting members
+          Relaunch pricing: $29 → $49 · 100 spots left
+        </div>
+        
+        {/* OG badge */}
+        <div className="mb-8">
+          <span className="inline-block px-3 py-1 border border-accent-warm/50 text-accent-warm font-mono text-xs rounded-full">
+            Est. 2021 · 500+ OG Members
+          </span>
         </div>
         
         <h1 className="font-mono text-5xl md:text-7xl font-bold tracking-tight mb-6">
@@ -18,8 +26,8 @@ export default function Hero() {
         </p>
         
         <p className="text-muted max-w-xl mx-auto mb-12">
-          A paid community of builders, researchers, and curious minds discovering 
-          what's possible with digital technology.
+          A paid community relaunching in 2026. For builders, researchers, and curious minds 
+          discovering what's possible with AI and digital technology.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -39,18 +47,14 @@ export default function Hero() {
           </a>
         </div>
         
-        <div className="mt-16 flex items-center justify-center gap-8 text-sm text-muted">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-accent rounded-full" />
-            <span>500+ members</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-accent-warm rounded-full" />
-            <span>Daily insights</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-accent rounded-full" />
-            <span>Weekly calls</span>
+        {/* ls-style feature list */}
+        <div className="mt-16 font-mono text-sm text-left max-w-md mx-auto">
+          <div className="text-muted mb-2">$ ls features/</div>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-1">
+            <span className="text-accent">●</span> Private Discord
+            <span className="text-accent">●</span> Daily intel
+            <span className="text-accent-warm">◐</span> Weekly calls
+            <span className="text-accent-warm">◐</span> Resource library
           </div>
         </div>
       </div>
