@@ -80,7 +80,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-3">
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-coral/10 border border-coral/50 text-coral font-mono text-sm tracking-wider rounded-lg hover:bg-coral/20 transition-all"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-amber text-background font-mono text-sm tracking-wider rounded-lg hover:bg-amber-bright transition-all shadow-lg shadow-amber/20"
           >
             Enter the Club — $99/year
             <span>→</span>
