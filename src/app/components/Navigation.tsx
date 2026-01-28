@@ -14,8 +14,8 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+    <nav className="fixed top-6 left-6 right-6 z-50">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 border border-copper/30 rounded-lg flex items-center justify-center">
@@ -23,8 +23,8 @@ export default function Navigation() {
           </div>
         </Link>
 
-        {/* Nav Links */}
-        <div className="hidden sm:flex items-center gap-1 bg-glass px-2 py-1.5 rounded-full border border-copper/10">
+        {/* Nav Links - Centered */}
+        <div className="hidden sm:flex items-center justify-center gap-1 bg-glass px-2 py-1.5 rounded-full border border-copper/10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
