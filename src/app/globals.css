@@ -29,7 +29,7 @@
   --color-border: var(--border);
   --color-card: var(--card);
   --color-hover: var(--hover);
-  --font-sans: var(--font-dm), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, "Times New Roman", serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
 }
 
@@ -40,6 +40,10 @@ body {
 }
 
 /* Typography */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
 .font-mono {
   font-family: var(--font-mono);
 }

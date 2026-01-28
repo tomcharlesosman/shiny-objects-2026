@@ -37,31 +37,31 @@ export default function Hero() {
           />
         </div>
 
-        {/* Main headline - monumental */}
+        {/* Main headline - monumental serif */}
         <div className="mb-12 border-l border-amber/30 pl-8">
           <p className="text-stone-dark font-mono text-xs tracking-[0.4em] uppercase mb-6">
             The AI Discovery Community
           </p>
-          <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight">
-            <span className="block text-foreground">The only</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal leading-[0.95] tracking-tight">
+            <span className="block text-foreground italic">The only</span>
             <span className="block text-foreground">community</span>
-            <span className="block shiny-text font-normal">at the edge.</span>
+            <span className="block shiny-text font-medium">at the edge.</span>
           </h1>
         </div>
 
         {/* Classical three-column layout */}
-        <div className="grid grid-cols-3 gap-8 mb-12 border-t border-border pt-8">
-          <div className="pillar px-4">
-            <span className="block text-3xl font-light text-foreground mb-1">500+</span>
-            <span className="text-foreground-muted text-xs uppercase tracking-wider">Members</span>
+        <div className="grid grid-cols-3 gap-8 mb-12 border-t border-border pt-8 font-serif">
+          <div className="pillar px-4 text-center">
+            <span className="block text-4xl font-light text-foreground mb-1">500+</span>
+            <span className="text-foreground-muted text-xs uppercase tracking-widest font-mono">Members</span>
           </div>
-          <div className="pillar px-4">
-            <span className="block text-3xl font-light text-foreground mb-1">MMXXI</span>
-            <span className="text-foreground-muted text-xs uppercase tracking-wider">Founded</span>
+          <div className="pillar px-4 text-center">
+            <span className="block text-4xl font-light text-foreground mb-1 italic">MMXXI</span>
+            <span className="text-foreground-muted text-xs uppercase tracking-widest font-mono">Founded</span>
           </div>
-          <div className="pillar px-4">
-            <span className="block text-3xl font-light text-foreground mb-1">Daily</span>
-            <span className="text-foreground-muted text-xs uppercase tracking-wider">Intel</span>
+          <div className="pillar px-4 text-center">
+            <span className="block text-4xl font-light text-foreground mb-1">Daily</span>
+            <span className="text-foreground-muted text-xs uppercase tracking-widest font-mono">Intel</span>
           </div>
         </div>
 
@@ -69,14 +69,14 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="#pricing"
-            className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-amber text-background font-semibold text-lg tracking-wide rounded-sm hover:bg-amber-glow transition-all glow"
+            className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-amber text-background font-medium text-lg tracking-wide rounded-sm hover:bg-amber-glow transition-all glow font-serif"
           >
             Enter the Club — $99/year
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
           <a
             href="#inside"
-            className="inline-flex items-center justify-center px-10 py-5 border border-stone-dark/50 text-foreground font-medium tracking-wide rounded-sm hover:border-amber/50 hover:bg-hover/50 transition-colors"
+            className="inline-flex items-center justify-center px-10 py-5 border border-stone-dark/50 text-foreground font-normal tracking-wide rounded-sm hover:border-amber/50 hover:bg-hover/50 transition-colors font-serif"
           >
             Discover what&apos;s inside
           </a>

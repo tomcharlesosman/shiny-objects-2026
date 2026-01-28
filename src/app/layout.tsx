@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Space_Mono } from "next/font/google";
+import { Playfair_Display, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-dm",
+  variable: "--font-serif",
 });
 
-const spaceMono = Space_Mono({
+const sourceCode = Source_Code_Pro({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-mono",
 });
 
@@ -29,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`${playfair.variable} ${sourceCode.variable}`}>
+      <body className="font-serif antialiased">{children}</body>
     </html>
   );
 }
