@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
+import Navigation from "./components/Navigation";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -30,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${sourceCode.variable} light`}>
-      <body className="font-serif antialiased">{children}</body>
+      <body className="font-serif antialiased">
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }

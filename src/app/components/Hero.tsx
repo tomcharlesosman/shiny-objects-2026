@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Hero() {
   return (
@@ -23,11 +22,6 @@ export default function Hero() {
       {/* Vertical line illumination - architectural LED strips */}
       <div className="absolute left-[15%] top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-amber/30 to-transparent pointer-events-none" />
       <div className="absolute right-[15%] top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-amber/30 to-transparent pointer-events-none" />
-      
-      {/* Theme Toggle */}
-      <div className="absolute top-8 right-8 z-20">
-        <ThemeToggle />
-      </div>
       
       <div className="relative z-10 max-w-3xl mx-auto w-full flex flex-col items-center text-center">
         
