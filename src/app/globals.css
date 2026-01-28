@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* Shiny Object brand palette - warm coral, ochre, gold */
-  --background: #1a1814;
-  --background-alt: #242220;
-  --foreground: #fafaf9;
-  --foreground-muted: #a8a29e;
-  --accent: #f97316;
-  --accent-secondary: #fbbf24;
-  --accent-gold: #f59e0b;
-  --border: #3f3b36;
-  --card: #242220;
-  --hover: #2d2a26;
+  /* Shiny Object brand palette - cool tones: blues, purples, cyan, mint */
+  --background: #0a0a0f;
+  --background-alt: #12121a;
+  --foreground: #ffffff;
+  --foreground-muted: #a0a0b0;
+  --accent: #6625f4;
+  --accent-secondary: #3fd5dd;
+  --accent-cyan: #0099d9;
+  --accent-mint: #cff7f1;
+  --border: #1e1e2e;
+  --card: #161622;
+  --hover: #1f1f30;
 }
 
 @theme inline {
@@ -21,7 +22,8 @@
   --color-foreground-muted: var(--foreground-muted);
   --color-accent: var(--accent);
   --color-accent-secondary: var(--accent-secondary);
-  --color-accent-gold: var(--accent-gold);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-mint: var(--accent-mint);
   --color-border: var(--border);
   --color-card: var(--card);
   --color-hover: var(--hover);
@@ -40,15 +42,15 @@ body {
   font-family: var(--font-mono);
 }
 
-/* Shiny text glow */
+/* Shiny text glow - purple */
 .shiny-text {
   color: var(--accent);
-  text-shadow: 0 0 40px rgba(249, 115, 22, 0.3);
+  text-shadow: 0 0 60px rgba(102, 37, 244, 0.4);
 }
 
-/* Glow effect */
+/* Glow effect - cyan */
 .glow {
-  box-shadow: 0 0 40px -10px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 60px -15px rgba(63, 213, 221, 0.5);
 }
 
 /* Marquee animation */
@@ -66,18 +68,18 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Selection */
+/* Selection - mint */
 ::selection {
-  background: var(--accent);
+  background: var(--accent-secondary);
   color: var(--background);
 }
 
-/* Star sparkle animation */
+/* Sparkle animation */
 @keyframes sparkle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.1); }
+  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.7; transform: scale(1.2) rotate(180deg); }
 }
 
 .sparkle {
-  animation: sparkle 2s ease-in-out infinite;
+  animation: sparkle 3s ease-in-out infinite;
 }
