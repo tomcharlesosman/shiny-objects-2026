@@ -29,13 +29,13 @@ export default function Hero() {
 
         {/* Logo in rounded arch frame - elevator style */}
         <div className="mb-12 flex justify-center">
-          <div className="arch-rounded p-8 inline-flex bg-glass underlight">
+          <div className="arch-rounded p-6 inline-flex bg-glass underlight">
             <Image 
               src="/logo-sosc.png" 
               alt="Shiny Object Social Club" 
-              width={200} 
-              height={200}
-              className="opacity-95"
+              width={120} 
+              height={120}
+              className="opacity-70"
             />
           </div>
         </div>
