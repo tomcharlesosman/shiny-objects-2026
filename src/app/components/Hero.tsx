@@ -3,69 +3,65 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 py-32 overflow-hidden">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(102,37,244,0.15),transparent)]" />
+      {/* Geometric background pattern */}
+      <div className="absolute inset-0 geometric-pattern opacity-30" />
       
-      <div className="relative z-10 max-w-6xl mx-auto w-full">
-        {/* Top nav area */}
-        <div className="flex items-center justify-between mb-20">
-          <Image 
-            src="/logo.png" 
-            alt="Shiny Object" 
-            width={48} 
-            height={48}
-            className="opacity-90"
-          />
-          <div className="flex items-center gap-2 text-sm font-mono text-foreground-muted">
-            <span className="w-2 h-2 bg-accent-secondary rounded-full animate-pulse" />
-            <span>Est. 2021</span>
-          </div>
+      {/* Warm ambient glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-amber/5 rounded-full blur-3xl" />
+      
+      <div className="relative z-10 max-w-5xl mx-auto w-full">
+        {/* Top ornament */}
+        <div className="flex items-center gap-4 mb-16">
+          <div className="ornament" />
+          <span className="text-amber font-mono text-xs tracking-[0.3em] uppercase">
+            Est. MMXXI
+          </span>
+          <div className="ornament" />
         </div>
 
-        {/* Wordmark */}
-        <div className="mb-12">
+        {/* Logo mark - classical column-inspired */}
+        <div className="mb-12 flex items-center gap-4">
+          <div className="w-12 h-16 border border-stone-dark/50 flex flex-col justify-between py-2 px-3">
+            <div className="w-full h-px bg-amber/50" />
+            <div className="w-full h-px bg-stone-dark/30" />
+            <div className="w-full h-px bg-stone-dark/30" />
+            <div className="w-full h-px bg-stone-dark/30" />
+            <div className="w-full h-px bg-amber/50" />
+          </div>
           <Image 
             src="/wordmark.png" 
             alt="Shiny Object Social Club" 
-            width={400} 
-            height={80}
-            className="opacity-95 max-w-full h-auto"
+            width={300} 
+            height={60}
+            className="opacity-90 max-w-[280px] h-auto"
           />
         </div>
 
-        {/* Main headline - editorial style */}
-        <div className="max-w-4xl mb-12">
-          <p className="text-accent-secondary font-mono text-sm tracking-widest uppercase mb-6">
+        {/* Main headline - monumental */}
+        <div className="mb-12 border-l border-amber/30 pl-8">
+          <p className="text-stone-dark font-mono text-xs tracking-[0.4em] uppercase mb-6">
             The AI Discovery Community
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-            The only community you need to stay{" "}
-            <span className="text-accent">at the edge of AI.</span>
+          <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight">
+            <span className="block text-foreground">The only</span>
+            <span className="block text-foreground">community</span>
+            <span className="block shiny-text font-normal">at the edge.</span>
           </h1>
         </div>
 
-        {/* Subheadline */}
-        <p className="text-xl text-foreground-muted max-w-2xl mb-8 leading-relaxed">
-          500+ builders, researchers, and curious minds. 
-          Spotting what matters before it hits the mainstream.
-        </p>
-
-        {/* Stats row */}
-        <div className="flex flex-wrap items-center gap-8 text-sm font-mono text-foreground-muted mb-12 border-t border-border pt-8">
-          <div>
-            <span className="text-foreground text-2xl font-bold">500+</span>
-            <span className="block">Members</span>
+        {/* Classical three-column layout */}
+        <div className="grid grid-cols-3 gap-8 mb-12 border-t border-border pt-8">
+          <div className="pillar px-4">
+            <span className="block text-3xl font-light text-foreground mb-1">500+</span>
+            <span className="text-foreground-muted text-xs uppercase tracking-wider">Members</span>
           </div>
-          <div>
-            <span className="text-foreground text-2xl font-bold">2021</span>
-            <span className="block">Established</span>
+          <div className="pillar px-4">
+            <span className="block text-3xl font-light text-foreground mb-1">MMXXI</span>
+            <span className="text-foreground-muted text-xs uppercase tracking-wider">Founded</span>
           </div>
-          <div>
-            <span className="text-foreground text-2xl font-bold">Daily</span>
-            <span className="block">Intel</span>
-          </div>
-          <div className="ml-auto">
-            <span className="text-accent-secondary">47 spots left</span>
+          <div className="pillar px-4">
+            <span className="block text-3xl font-light text-foreground mb-1">Daily</span>
+            <span className="text-foreground-muted text-xs uppercase tracking-wider">Intel</span>
           </div>
         </div>
 
@@ -73,25 +69,32 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="#pricing"
-            className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-accent text-white font-bold text-lg rounded-lg hover:bg-accent/90 transition-all"
-            style={{ boxShadow: '0 0 60px -15px rgba(102, 37, 244, 0.5)' }}
+            className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-amber text-background font-semibold text-lg tracking-wide rounded-sm hover:bg-amber-glow transition-all glow"
           >
-            Join the Club — $99/year
+            Enter the Club — $99/year
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
           <a
             href="#inside"
-            className="inline-flex items-center justify-center px-10 py-5 border border-border text-foreground font-semibold rounded-lg hover:bg-hover transition-colors"
+            className="inline-flex items-center justify-center px-10 py-5 border border-stone-dark/50 text-foreground font-medium tracking-wide rounded-sm hover:border-amber/50 hover:bg-hover/50 transition-colors"
           >
-            Explore what&apos;s inside
+            Discover what&apos;s inside
           </a>
+        </div>
+
+        {/* Bottom ornament */}
+        <div className="mt-16 flex items-center gap-4">
+          <div className="ornament" />
+          <span className="text-foreground-muted font-mono text-xs">
+            47 invitations remaining
+          </span>
+          <div className="ornament" />
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground-muted text-xs font-mono">
-        <span>Scroll</span>
-        <div className="w-px h-8 bg-border" />
+        <span>↓</span>
       </div>
     </section>
   );

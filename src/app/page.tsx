@@ -8,7 +8,7 @@ import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background noise">
+    <main className="min-h-screen bg-background">
       <Hero />
       <Ticker />
       <Manifesto />
@@ -16,17 +16,15 @@ export default function Home() {
       <Members />
       <Pricing />
       <FAQ />
-      <footer className="border-t border-border py-16 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-foreground-muted text-sm">
-            © 2026 Shiny Object Social Club
-          </div>
-          <div className="flex items-center gap-6 text-sm">
-            <a href="https://x.com/ShinyObjectSC" target="_blank" rel="noopener noreferrer" className="text-foreground-muted hover:text-foreground transition-colors">
-              X/Twitter
+      <footer className="border-t border-border/50 py-16 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-foreground-muted text-xs font-mono tracking-wider">
+          <div>© MMXXVI SHINY OBJECT SOCIAL CLUB</div>
+          <div className="flex items-center gap-8">
+            <a href="https://x.com/ShinyObjectSC" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              X/TWITTER
             </a>
-            <a href="mailto:hello@shinyobject.club" className="text-foreground-muted hover:text-foreground transition-colors">
-              Contact
+            <a href="mailto:hello@shinyobject.club" className="hover:text-foreground transition-colors">
+              CONTACT
             </a>
           </div>
         </div>

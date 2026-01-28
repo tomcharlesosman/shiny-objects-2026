@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  /* Shiny Object brand palette - cool tones: blues, purples, cyan, mint */
-  --background: #0a0a0f;
-  --background-alt: #12121a;
-  --foreground: #ffffff;
-  --foreground-muted: #a0a0b0;
-  --accent: #6625f4;
-  --accent-secondary: #3fd5dd;
-  --accent-cyan: #0099d9;
-  --accent-mint: #cff7f1;
-  --border: #1e1e2e;
-  --card: #161622;
-  --hover: #1f1f30;
+  /* Greco-Futurism palette - warm stone, amber light, classical elegance */
+  --background: #0c0b09;
+  --background-alt: #141311;
+  --foreground: #f5f3ef;
+  --foreground-muted: #9a9590;
+  --stone: #d4cfc7;
+  --stone-dark: #6b6560;
+  --amber: #f59e0b;
+  --amber-glow: #fbbf24;
+  --gold: #d4af37;
+  --border: #2a2826;
+  --card: #1a1816;
+  --hover: #252321;
 }
 
 @theme inline {
@@ -20,10 +21,11 @@
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
-  --color-accent: var(--accent);
-  --color-accent-secondary: var(--accent-secondary);
-  --color-accent-cyan: var(--accent-cyan);
-  --color-accent-mint: var(--accent-mint);
+  --color-stone: var(--stone);
+  --color-stone-dark: var(--stone-dark);
+  --color-amber: var(--amber);
+  --color-amber-glow: var(--amber-glow);
+  --color-gold: var(--gold);
   --color-border: var(--border);
   --color-card: var(--card);
   --color-hover: var(--hover);
@@ -42,15 +44,33 @@ body {
   font-family: var(--font-mono);
 }
 
-/* Shiny text glow - purple */
+/* Greco-Futurist golden text */
 .shiny-text {
-  color: var(--accent);
-  text-shadow: 0 0 60px rgba(102, 37, 244, 0.4);
+  background: linear-gradient(135deg, var(--amber) 0%, var(--gold) 50%, var(--amber-glow) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 80px rgba(245, 158, 11, 0.3);
 }
 
-/* Glow effect - cyan */
+/* Classical pillar/card styling */
+.pillar {
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  background: linear-gradient(180deg, transparent 0%, rgba(212, 207, 199, 0.02) 50%, transparent 100%);
+}
+
+/* Amber glow */
 .glow {
-  box-shadow: 0 0 60px -15px rgba(63, 213, 221, 0.5);
+  box-shadow: 0 0 60px -10px rgba(245, 158, 11, 0.4);
+}
+
+/* Geometric line pattern - Greco-Futurist */
+.geometric-pattern {
+  background-image: 
+    linear-gradient(90deg, var(--border) 1px, transparent 1px),
+    linear-gradient(var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* Marquee animation */
@@ -60,7 +80,7 @@ body {
 }
 
 .marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 /* Smooth scroll */
@@ -68,18 +88,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Selection - mint */
+/* Selection - amber */
 ::selection {
-  background: var(--accent-secondary);
+  background: var(--amber);
   color: var(--background);
 }
 
-/* Sparkle animation */
-@keyframes sparkle {
-  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
-  50% { opacity: 0.7; transform: scale(1.2) rotate(180deg); }
-}
-
-.sparkle {
-  animation: sparkle 3s ease-in-out infinite;
+/* Classical ornament */
+.ornament {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
 }
