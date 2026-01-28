@@ -27,30 +27,44 @@ const features = [
 
 export default function Inside() {
   return (
-    <section id="inside" className="py-32 px-6 border-t border-border/50 relative">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-4 mb-16">
-          <span className="text-copper font-mono text-xs tracking-wider">CAPABILITIES</span>
-          <div className="flex-1 h-px bg-border" />
+    <section id="inside" className="py-32 px-6 border-t border-wood/30 relative">
+      {/* Decorative column lines */}
+      <div className="absolute top-0 bottom-0 left-[20%] w-px bg-gradient-to-b from-amber/20 via-transparent to-amber/20" />
+      <div className="absolute top-0 bottom-0 right-[20%] w-px bg-gradient-to-b from-amber/20 via-transparent to-amber/20" />
+      
+      <div className="max-w-6xl mx-auto relative">
+        <div className="flex items-center justify-center gap-4 mb-16">
+          <div className="h-px w-12 bg-amber/30" />
+          <span className="text-amber/70 font-mono text-xs tracking-[0.3em] uppercase">Capabilities</span>
+          <div className="h-px w-12 bg-amber/30" />
         </div>
         
-        <h2 className="text-4xl md:text-5xl font-serif text-cream mb-4">
+        <h2 className="text-4xl md:text-5xl font-serif text-cream mb-4 text-center">
           What You Receive
         </h2>
-        <p className="text-foreground-muted max-w-xl mb-12">
+        <p className="text-foreground-muted max-w-xl mb-16 text-center mx-auto">
           Everything required to maintain observational advantage.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {features.map((feature) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="glass p-6 rounded-2xl border border-wood hover:border-copper/30 transition-all underlight"
+              className="group relative"
             >
-              <h3 className="text-lg font-serif text-cream mb-2">{feature.title}</h3>
-              <p className="text-foreground-muted text-sm leading-relaxed">
-                {feature.description}
-              </p>
+              {/* Arch frame on hover */}
+              <div className="absolute -inset-2 border border-amber/0 group-hover:border-amber/20 rounded-t-[24px] rounded-b-md transition-all duration-300" />
+              
+              <div className="glass p-6 rounded-t-[20px] rounded-b-sm border-t border-wood group-hover:border-amber/30 transition-all relative overflow-hidden">
+                {/* Subtle amber glow on hover */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-amber/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <span className="text-amber/40 font-mono text-xs block mb-3">0{i + 1}</span>
+                <h3 className="text-lg font-serif text-cream mb-2">{feature.title}</h3>
+                <p className="text-foreground-muted text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

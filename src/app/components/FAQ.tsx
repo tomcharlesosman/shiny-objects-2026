@@ -28,30 +28,48 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="py-32 px-6 border-t border-border/50 relative">
-      <div className="max-w-2xl mx-auto">
-        <div className="flex items-center gap-4 mb-12">
-          <span className="text-copper font-mono text-xs tracking-wider">FAQ</span>
-          <div className="flex-1 h-px bg-border" />
+    <section className="py-32 px-6 border-t border-wood/30 relative">
+      {/* Decorative columns */}
+      <div className="absolute top-0 bottom-0 left-[10%] w-px bg-gradient-to-b from-amber/10 via-transparent to-amber/10" />
+      <div className="absolute top-0 bottom-0 right-[10%] w-px bg-gradient-to-b from-amber/10 via-transparent to-amber/10" />
+      
+      <div className="max-w-2xl mx-auto relative">
+        <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="h-px w-12 bg-amber/30" />
+          <span className="text-amber/70 font-mono text-xs tracking-[0.3em] uppercase">Questions</span>
+          <div className="h-px w-12 bg-amber/30" />
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div key={i} className="glass p-6 rounded-2xl border border-wood hover:border-copper/30 transition-colors underlight">
-              <h3 className="font-serif text-cream mb-2">{faq.question}</h3>
-              <p className="text-foreground-muted text-sm leading-relaxed">{faq.answer}</p>
+            <div key={i} className="group relative">
+              {/* Hover arch effect */}
+              <div className="absolute -inset-2 border border-amber/0 group-hover:border-amber/10 rounded-t-[20px] rounded-b-sm transition-all" />
+              
+              <div className="glass p-6 rounded-t-[16px] rounded-b-sm border-t border-wood group-hover:border-amber/20 transition-colors relative">
+                {/* Side light strip */}
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber/30 via-amber/10 to-amber/30 rounded-l" />
+                
+                <h3 className="font-serif text-cream mb-3 text-lg">{faq.question}</h3>
+                <p className="text-foreground-muted text-sm leading-relaxed">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>
 
+        {/* Contact - like a door plate */}
         <div className="mt-12 text-center">
-          <p className="text-foreground-muted/40 text-xs font-mono mb-4">ADDITIONAL QUESTIONS</p>
-          <a
-            href="mailto:hello@shinyobject.club"
-            className="text-copper hover:text-copper-bright transition-colors font-mono text-sm"
-          >
-            hello@shinyobject.club
-          </a>
+          <div className="inline-flex flex-col items-center">
+            <div className="h-px w-16 bg-amber/20 mb-4" />
+            <p className="text-foreground-muted/40 text-xs font-mono mb-3 tracking-wider">ADDITIONAL INQUIRIES</p>
+            <a
+              href="mailto:hello@shinyobject.club"
+              className="text-amber hover:text-amber-bright transition-colors font-mono text-sm tracking-wider border-b border-amber/30 pb-1 hover:border-amber"
+            >
+              hello@shinyobject.club
+            </a>
+            <div className="h-px w-16 bg-amber/20 mt-4" />
+          </div>
         </div>
       </div>
     </section>

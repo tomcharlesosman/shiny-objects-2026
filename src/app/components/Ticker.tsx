@@ -13,20 +13,20 @@ const tickerItems = [
 
 export default function Ticker() {
   return (
-    <div className="border-y border-border/50 bg-background-alt/20 overflow-hidden py-3">
+    <div className="border-y border-wood/30 bg-background-alt/20 overflow-hidden py-4">
       <div className="flex whitespace-nowrap">
-        <div className="marquee flex items-center gap-12 text-xs font-mono text-foreground-muted/40 tracking-widest uppercase">
+        <div className="marquee flex items-center gap-16 text-sm font-mono text-foreground-muted/50 tracking-[0.2em] uppercase">
           {[...tickerItems, ...tickerItems].map((item, i) => (
             <span key={i} className="flex items-center gap-4">
-              <span className="text-copper/40">●</span>
+              <span className="text-amber/50">◆</span>
               <span>{item}</span>
             </span>
           ))}
         </div>
-        <div className="marquee flex items-center gap-12 text-xs font-mono text-foreground-muted/40 tracking-widest uppercase">
+        <div className="marquee flex items-center gap-16 text-sm font-mono text-foreground-muted/50 tracking-[0.2em] uppercase">
           {[...tickerItems, ...tickerItems].map((item, i) => (
             <span key={i} className="flex items-center gap-4">
-              <span className="text-copper/40">●</span>
+              <span className="text-amber/50">◆</span>
               <span>{item}</span>
             </span>
           ))}
