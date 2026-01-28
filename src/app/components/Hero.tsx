@@ -2,18 +2,24 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 py-32 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#292524_1px,transparent_1px),linear-gradient(to_bottom,#292524_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_40%,transparent_100%)] opacity-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#3f3b36_1px,transparent_1px),linear-gradient(to_bottom,#3f3b36_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_40%,transparent_100%)] opacity-20" />
       
       <div className="relative z-10 max-w-5xl mx-auto w-full">
-        {/* Logo mark */}
+        {/* Logo - Star mark */}
         <div className="mb-12">
-          <svg width="64" height="64" viewBox="0 0 100 100" fill="none" className="text-accent">
-            <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="2" fill="none" />
-            <circle cx="50" cy="50" r="8" fill="currentColor" />
-            <line x1="50" y1="5" x2="50" y2="25" stroke="currentColor" strokeWidth="2" />
-            <line x1="50" y1="75" x2="50" y2="95" stroke="currentColor" strokeWidth="2" />
-            <line x1="5" y1="50" x2="25" y2="50" stroke="currentColor" strokeWidth="2" />
-            <line x1="75" y1="50" x2="95" y2="50" stroke="currentColor" strokeWidth="2" />
+          <svg width="72" height="72" viewBox="0 0 100 100" fill="none" className="sparkle">
+            {/* Outer circle */}
+            <circle cx="50" cy="50" r="45" stroke="#f97316" strokeWidth="2" fill="none" />
+            {/* Star in center */}
+            <path 
+              d="M50 15 L55 40 L80 40 L60 55 L68 80 L50 65 L32 80 L40 55 L20 40 L45 40 Z" 
+              fill="#f97316"
+            />
+            {/* Sparkle lines */}
+            <line x1="50" y1="5" x2="50" y2="12" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+            <line x1="50" y1="88" x2="50" y2="95" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+            <line x1="5" y1="50" x2="12" y2="50" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+            <line x1="88" y1="50" x2="95" y2="50" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
           </svg>
         </div>
 

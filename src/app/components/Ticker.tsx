@@ -18,7 +18,7 @@ export default function Ticker() {
         <div className="marquee flex items-center gap-8 text-sm font-mono text-foreground-muted">
           {[...tickerItems, ...tickerItems].map((item, i) => (
             <span key={i} className="flex items-center gap-4">
-              <span className="text-accent">✦</span>
+              <span className="text-accent-gold">✦</span>
               <span>{item}</span>
             </span>
           ))}
@@ -26,7 +26,7 @@ export default function Ticker() {
         <div className="marquee flex items-center gap-8 text-sm font-mono text-foreground-muted">
           {[...tickerItems, ...tickerItems].map((item, i) => (
             <span key={i} className="flex items-center gap-4">
-              <span className="text-accent">✦</span>
+              <span className="text-accent-gold">✦</span>
               <span>{item}</span>
             </span>
           ))}
