@@ -87,7 +87,7 @@ export default function Timeline() {
         {/* Vertical line */}
         <div className="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-copper/30 to-transparent" />
 
-        {timelineEvents.map((event, index) => (
+        {[...timelineEvents].reverse().map((event, index) => (
           <div
             key={index}
             className={`relative flex items-start gap-6 mb-12 ${
