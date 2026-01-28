@@ -1,28 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  /* Greco-Futurism: Classical marble meets LED glow */
-  --background: #050505;
-  --background-alt: #0a0a0a;
-  --foreground: #ffffff;
-  --foreground-muted: #737373;
+  /* Greco-Futurism: Warm marble, rose gold, nested arches */
+  --background: #0c0a09;
+  --background-alt: #1c1917;
+  --foreground: #faf6f1;
+  --foreground-muted: #a89f94;
   
-  /* Classical marble tones */
-  --marble: #e5e5e5;
-  --marble-warm: #d4d4d4;
-  --stone: #a3a3a3;
+  /* Warm marble tones */  
+  --marble: #f5ebe0;
+  --marble-warm: #e8ddd1;
+  --marble-cool: #d4c4b5;
   
-  /* LED/Neon accents - warm amber */
-  --led: #fbbf24;
-  --led-bright: #f59e0b;
-  --led-dim: #b45309;
+  /* Rose gold / copper */
+  --copper: #c9a77c;
+  --copper-bright: #d4af37;
+  --copper-dim: #8b7355;
+  --rose-gold: #b76e79;
   
-  /* Steel/glass */
-  --glass: rgba(255, 255, 255, 0.03);
-  --steel: #262626;
+  /* Dark stone */
+  --stone-dark: #292524;
+  --stone: #44403c;
   
-  --border: #1a1a1a;
-  --card: #0f0f0f;
+  /* Glass */
+  --glass: rgba(250, 246, 241, 0.03);
+  
+  --border: #292524;
+  --card: #1c1917;
 }
 
 @theme inline {
@@ -31,11 +35,11 @@
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
   --color-marble: var(--marble);
+  --color-marble-warm: var(--marble-warm);
+  --color-copper: var(--copper);
+  --color-copper-bright: var(--copper-bright);
   --color-stone: var(--stone);
-  --color-led: var(--led);
-  --color-led-bright: var(--led-bright);
   --color-glass: var(--glass);
-  --color-steel: var(--steel);
   --color-border: var(--border);
   --color-card: var(--card);
   --font-serif: var(--font-serif), Georgia, serif;
@@ -56,54 +60,65 @@ body {
   font-family: var(--font-mono);
 }
 
-/* LED glow text */
+/* Copper glow text */
 .shiny-text {
-  color: var(--led);
+  color: var(--copper);
   text-shadow: 
-    0 0 20px rgba(251, 191, 36, 0.5),
-    0 0 40px rgba(251, 191, 36, 0.3),
-    0 0 60px rgba(251, 191, 36, 0.1);
+    0 0 30px rgba(201, 167, 124, 0.4),
+    0 0 60px rgba(201, 167, 124, 0.2);
 }
 
-/* LED button glow */
-.glow-led {
+/* Copper button glow */
+.glow-copper {
   box-shadow: 
-    0 0 20px rgba(251, 191, 36, 0.3),
-    0 0 40px rgba(251, 191, 36, 0.1),
-    inset 0 0 20px rgba(251, 191, 36, 0.1);
+    0 0 30px rgba(201, 167, 124, 0.25),
+    inset 0 0 20px rgba(201, 167, 124, 0.05);
 }
 
 /* Classical column styling */
 .column {
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(255,255,255,0.02) 20%, 
-    rgba(255,255,255,0.05) 50%, 
-    rgba(255,255,255,0.02) 80%, 
+    rgba(245, 235, 224, 0.02) 20%, 
+    rgba(245, 235, 224, 0.05) 50%, 
+    rgba(245, 235, 224, 0.02) 80%, 
     transparent 100%
   );
   border-left: 1px solid var(--border);
   border-right: 1px solid var(--border);
 }
 
-/* LED line accent */
-.led-line {
+/* Copper line accent */
+.copper-line {
   height: 1px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    var(--led-dim) 20%, 
-    var(--led) 50%, 
-    var(--led-dim) 80%, 
+    var(--copper-dim) 20%, 
+    var(--copper) 50%, 
+    var(--copper-dim) 80%, 
     transparent 100%
   );
-  box-shadow: 0 0 10px var(--led);
 }
 
 /* Glass morphism */
 .glass {
   background: var(--glass);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(250, 246, 241, 0.05);
+}
+
+/* Arch/nested frame */
+.arch-frame {
+  border: 1px solid var(--copper-dim);
+  position: relative;
+}
+
+.arch-frame::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(201, 167, 124, 0.3);
+  pointer-events: none;
 }
 
 /* Marquee */
@@ -118,14 +133,12 @@ body {
 
 /* Selection */
 ::selection {
-  background: var(--led);
+  background: var(--copper);
   color: var(--background);
 }
 
-/* Grid pattern - like LED matrix */
-.grid-led {
-  background-image: 
-    linear-gradient(rgba(251, 191, 36, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(251, 191, 36, 0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
+/* Subtle texture */
+.texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
 }

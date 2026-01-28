@@ -16,17 +16,14 @@ export default function Home() {
       <Members />
       <Pricing />
       <FAQ />
-      <footer className="border-t border-border py-16 px-6 relative">
-        {/* LED accent */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-10 bg-gradient-to-b from-amber/30 to-transparent" />
-        
+      <footer className="border-t border-border py-16 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-foreground-muted/30 text-xs font-mono tracking-wider">
           <div>© MMXXVI SHINY OBJECT SOCIAL CLUB</div>
           <div className="flex items-center gap-8">
-            <a href="https://x.com/ShinyObjectSC" target="_blank" rel="noopener noreferrer" className="hover:text-amber transition-colors">
+            <a href="https://x.com/ShinyObjectSC" target="_blank" rel="noopener noreferrer" className="hover:text-copper transition-colors">
               X/TWITTER
             </a>
-            <a href="mailto:hello@shinyobject.club" className="hover:text-amber transition-colors">
+            <a href="mailto:hello@shinyobject.club" className="hover:text-copper transition-colors">
               CONTACT
             </a>
           </div>

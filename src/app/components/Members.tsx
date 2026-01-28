@@ -1,8 +1,8 @@
 const memberTypes = [
-  { role: "Founders", count: "120+", code: "TYPE_ALPHA" },
-  { role: "Engineers", count: "200+", code: "TYPE_BETA" },
-  { role: "Researchers", count: "80+", code: "TYPE_GAMMA" },
-  { role: "Creatives", count: "100+", code: "TYPE_DELTA" },
+  { role: "Founders", count: "120+" },
+  { role: "Engineers", count: "200+" },
+  { role: "Researchers", count: "80+" },
+  { role: "Creatives", count: "100+" },
 ];
 
 const testimonials = [
@@ -25,23 +25,19 @@ const testimonials = [
 
 export default function Members() {
   return (
-    <section className="py-32 px-6 border-t border-border bg-background-alt/30 relative">
-      {/* LED accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-amber/30 to-transparent" />
-      
+    <section className="py-32 px-6 border-t border-border relative">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-4 mb-16">
-          <span className="text-amber font-mono text-xs">[ MEMBER_COMPOSITION ]</span>
+          <span className="text-copper font-mono text-xs tracking-wider">MEMBERS</span>
           <div className="flex-1 h-px bg-border" />
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/50 mb-20">
           {memberTypes.map((type) => (
             <div key={type.role} className="column p-6 text-center bg-background">
-              <span className="text-amber/40 font-mono text-xs block mb-2">{type.code}</span>
               <span className="block text-3xl font-serif text-marble mb-1">{type.count}</span>
-              <span className="text-foreground-muted text-xs uppercase tracking-wider">{type.role}</span>
+              <span className="text-foreground-muted/60 text-xs uppercase tracking-widest font-mono">{type.role}</span>
             </div>
           ))}
         </div>
@@ -49,7 +45,7 @@ export default function Members() {
         {/* Testimonials */}
         <div className="grid md:grid-cols-3 gap-4">
           {testimonials.map((t) => (
-            <div key={t.author} className="glass p-6 rounded border-l-2 border-amber/30">
+            <div key={t.author} className="glass p-6 rounded-sm border-t border-copper/30">
               <p className="text-foreground-muted mb-6 leading-relaxed text-sm">
                 &ldquo;{t.quote}&rdquo;
               </p>

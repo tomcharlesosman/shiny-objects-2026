@@ -1,12 +1,9 @@
 export default function Pricing() {
   return (
     <section id="pricing" className="py-32 px-6 border-t border-border relative">
-      {/* LED accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-amber/30 to-transparent" />
-      
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
-          <span className="text-amber font-mono text-xs">[ MEMBERSHIP_PROTOCOL ]</span>
+          <span className="text-copper font-mono text-xs tracking-wider">MEMBERSHIP</span>
           <div className="flex-1 h-px bg-border" />
         </div>
 
@@ -14,13 +11,13 @@ export default function Pricing() {
           <h2 className="text-5xl md:text-7xl font-serif text-marble mb-4">
             $99/year
           </h2>
-          <p className="text-foreground-muted font-mono text-sm tracking-wider">
+          <p className="text-foreground-muted font-mono text-xs tracking-wider">
             LESS THAN $2 PER WEEK
           </p>
         </div>
 
-        <div className="glass p-8 rounded-lg border border-amber/20 mb-8">
-          <h3 className="text-amber font-mono text-xs mb-6 tracking-wider">[ ACCESS_GRANTED ]</h3>
+        <div className="glass p-8 rounded-sm border border-copper/20 mb-8">
+          <h3 className="text-copper font-mono text-xs mb-6 tracking-wider">ACCESS INCLUDES</h3>
           <ul className="space-y-4">
             {[
               "Daily AI intel (5-7 curated items)",
@@ -31,7 +28,7 @@ export default function Pricing() {
               "Member events & network",
             ].map((f) => (
               <li key={f} className="flex items-center gap-3 text-foreground-muted">
-                <span className="text-amber">→</span>
+                <span className="text-copper">—</span>
                 <span>{f}</span>
               </li>
             ))}
@@ -42,20 +39,20 @@ export default function Pricing() {
           href="https://discord.gg/your-invite-link"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full text-center py-5 bg-amber/10 border border-amber text-amber font-mono text-sm tracking-wider rounded hover:bg-amber/20 transition-all glow-led"
+          className="block w-full text-center py-5 bg-copper/10 border border-copper text-copper font-mono text-sm tracking-wider rounded-sm hover:bg-copper/20 transition-all glow-copper"
         >
-          [ INITIATE_MEMBERSHIP ]
+          Join the Club
         </a>
 
         {/* Urgency */}
         <div className="mt-8 flex items-center justify-center gap-4 text-xs font-mono">
-          <span className="w-1.5 h-1.5 bg-amber rounded-full animate-pulse" />
+          <span className="w-1.5 h-1.5 bg-copper rounded-full animate-pulse" />
           <span className="text-foreground-muted">
-            47 SPOTS REMAINING AT RELAUNCH PRICING
+            47 SPOTS REMAINING
           </span>
         </div>
 
-        <p className="mt-4 text-foreground-muted/50 text-xs text-center font-mono">
+        <p className="mt-4 text-foreground-muted/40 text-xs text-center font-mono">
           30-DAY MONEY-BACK GUARANTEE
         </p>
       </div>
