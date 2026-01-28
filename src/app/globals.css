@@ -1,19 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  /* Greco-Futurism palette - warm stone, amber light, classical elegance */
-  --background: #0c0b09;
-  --background-alt: #141311;
-  --foreground: #f5f3ef;
-  --foreground-muted: #9a9590;
-  --stone: #d4cfc7;
-  --stone-dark: #6b6560;
-  --amber: #f59e0b;
-  --amber-glow: #fbbf24;
-  --gold: #d4af37;
-  --border: #2a2826;
-  --card: #1a1816;
-  --hover: #252321;
+  /* Greco-Futurism: Classical marble meets LED glow */
+  --background: #050505;
+  --background-alt: #0a0a0a;
+  --foreground: #ffffff;
+  --foreground-muted: #737373;
+  
+  /* Classical marble tones */
+  --marble: #e5e5e5;
+  --marble-warm: #d4d4d4;
+  --stone: #a3a3a3;
+  
+  /* LED/Neon accents - warm amber */
+  --led: #fbbf24;
+  --led-bright: #f59e0b;
+  --led-dim: #b45309;
+  
+  /* Steel/glass */
+  --glass: rgba(255, 255, 255, 0.03);
+  --steel: #262626;
+  
+  --border: #1a1a1a;
+  --card: #0f0f0f;
 }
 
 @theme inline {
@@ -21,22 +30,21 @@
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
+  --color-marble: var(--marble);
   --color-stone: var(--stone);
-  --color-stone-dark: var(--stone-dark);
-  --color-amber: var(--amber);
-  --color-amber-glow: var(--amber-glow);
-  --color-gold: var(--gold);
+  --color-led: var(--led);
+  --color-led-bright: var(--led-bright);
+  --color-glass: var(--glass);
+  --color-steel: var(--steel);
   --color-border: var(--border);
   --color-card: var(--card);
-  --color-hover: var(--hover);
-  --font-serif: var(--font-serif), Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-serif), Georgia, serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 /* Typography */
@@ -48,59 +56,76 @@ body {
   font-family: var(--font-mono);
 }
 
-/* Greco-Futurist golden text */
+/* LED glow text */
 .shiny-text {
-  background: linear-gradient(135deg, var(--amber) 0%, var(--gold) 50%, var(--amber-glow) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 80px rgba(245, 158, 11, 0.3);
+  color: var(--led);
+  text-shadow: 
+    0 0 20px rgba(251, 191, 36, 0.5),
+    0 0 40px rgba(251, 191, 36, 0.3),
+    0 0 60px rgba(251, 191, 36, 0.1);
 }
 
-/* Classical pillar/card styling */
-.pillar {
+/* LED button glow */
+.glow-led {
+  box-shadow: 
+    0 0 20px rgba(251, 191, 36, 0.3),
+    0 0 40px rgba(251, 191, 36, 0.1),
+    inset 0 0 20px rgba(251, 191, 36, 0.1);
+}
+
+/* Classical column styling */
+.column {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255,255,255,0.02) 20%, 
+    rgba(255,255,255,0.05) 50%, 
+    rgba(255,255,255,0.02) 80%, 
+    transparent 100%
+  );
   border-left: 1px solid var(--border);
   border-right: 1px solid var(--border);
-  background: linear-gradient(180deg, transparent 0%, rgba(212, 207, 199, 0.02) 50%, transparent 100%);
 }
 
-/* Amber glow */
-.glow {
-  box-shadow: 0 0 60px -10px rgba(245, 158, 11, 0.4);
+/* LED line accent */
+.led-line {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--led-dim) 20%, 
+    var(--led) 50%, 
+    var(--led-dim) 80%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 10px var(--led);
 }
 
-/* Geometric line pattern - Greco-Futurist */
-.geometric-pattern {
-  background-image: 
-    linear-gradient(90deg, var(--border) 1px, transparent 1px),
-    linear-gradient(var(--border) 1px, transparent 1px);
-  background-size: 60px 60px;
+/* Glass morphism */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Marquee animation */
+/* Marquee */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 35s linear infinite;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Selection - amber */
+/* Selection */
 ::selection {
-  background: var(--amber);
+  background: var(--led);
   color: var(--background);
 }
 
-/* Classical ornament */
-.ornament {
-  width: 60px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+/* Grid pattern - like LED matrix */
+.grid-led {
+  background-image: 
+    linear-gradient(rgba(251, 191, 36, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 191, 36, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
 }
