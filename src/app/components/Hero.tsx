@@ -20,6 +20,10 @@ export default function Hero() {
       <div className="absolute inset-6 border border-wood/20 rounded-[24px] pointer-events-none" />
       <div className="absolute inset-10 border border-copper/10 rounded-[20px] pointer-events-none" />
       
+      {/* Vertical line illumination - architectural LED strips */}
+      <div className="absolute left-[15%] top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-amber/30 to-transparent pointer-events-none" />
+      <div className="absolute right-[15%] top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-amber/30 to-transparent pointer-events-none" />
+      
       {/* Theme Toggle */}
       <div className="absolute top-8 right-8 z-20">
         <ThemeToggle />
