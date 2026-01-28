@@ -11,10 +11,10 @@ export default function Hero() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-coral/5 rounded-full blur-3xl" />
       
       {/* Spectral glow behind logo */}
-      <div className="absolute top-[18%] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-amber/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[18%] left-1/2 -translate-x-1/2 w-[350px] h-[350px] bg-amber/20 rounded-full blur-[100px] pointer-events-none" />
       
       {/* Spectral glow behind headline */}
-      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-amber/8 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[600px] h-[250px] bg-amber/15 rounded-full blur-[80px] pointer-events-none" />
       
       {/* Outer frame */}
       <div className="absolute inset-6 border border-wood/20 rounded-[24px] pointer-events-none" />
